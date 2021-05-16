@@ -1,3 +1,13 @@
+*{
+    text-align : center;
+}
+img{
+    width: 277px;
+    height: 181.82px;
+    left: 360px;
+    top: 357px;
+}
+
 .navbar {
     width: 100%;
     height: 80px;
@@ -17,11 +27,27 @@
     letter-spacing: 0.04em;
     color: #CD0000;
 }
+#font-en1{
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-size: 21px;
+    color: #DAA520;
+}
 
 #font-ko {
-    font-family: UhBee Seulvely;
+    font-family: 'Gamja Flower', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 29px;
+}
+#font-ko1 {
+    font-family: 'Gamja Flower', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 21px;
     line-height: 29px;
+}
+.imgBox{
+    display : inline-block;
 }
