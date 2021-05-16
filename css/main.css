@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFCD1D;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    color: #CD0000;
+    
+}
+
+.title-container h1 {
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+.title-container h3 {
+    font-family: UhBee Seulvely;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    text-align: center;
+
+}
+
+
+/* 메인페이지 타이틀 아래 부분을 main container로 감쌈 */
+.main-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+
+/* 냉장고와 레시피 노트 이미지 부분 위치 설정 */
+
+.fridge-img-container{
+    width: 600px;
+    height: 100%;
+}
+
+/* 냉장고 컨테이너의 첫번쨰 자식인 냉장고 이미지 */
+.fridge-img-container > img:nth-child(1) {
+    width: 100%;
+}
+
+/* 냉장고 컨테이너의 두번째 자식인 레시피노트 이미지 */
+.fridge-img-container > img:nth-child(2){
+    position: relative;
+    width: 230px;
+    bottom: 800px;
+    left: 230px;
+    z-index: 50;
+}
+
+/* 냉장고 왼쪽 click fridge 설명 부분  */
+
+.clickFridge-container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 280px;
+    left: 140px;
+    z-index: 60;
+    margin-right: 20px;
+}
+
+
+.clickFridge-container > img{
+
+    width: 230px;
+}
+
+.clickFridge-container > div {
+
+
+    font-family: UhBee Seulvely;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: right;
+    text-decoration-line: underline;
+
+    color: #000000;
+
+    margin-top: 10px;
+
+}
+
+/* 냉장고 오른쪽 click recipe 설명 부분  */
+
+.clickRecipe-container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 280px;
+    z-index: 80;
+}
+
+
+.clickRecipe-container > img{
+
+    width: 230px;
+
+}
+
+.clickRecipe-container > div {
+
+
+
+    font-family: UhBee Seulvely;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 41px;
+    text-decoration-line: underline;
+    
+    color: #000000;
+    
+
+}
+
+
+
