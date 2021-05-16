@@ -1,0 +1,27 @@
+.navbar {
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    background: #FFCD1D;
+}
+
+#font-en {
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 44px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #CD0000;
+}
+
+#font-ko {
+    font-family: UhBee Seulvely;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 29px;
+}
