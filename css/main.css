@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body{
@@ -37,6 +38,10 @@ body{
 
 }
 
+h1 a{
+    color: inherit;
+}
+
 
 /* 메인페이지 타이틀 아래 부분을 main container로 감쌈 */
 .main-container{
@@ -49,17 +54,20 @@ body{
 /* 냉장고와 레시피 노트 이미지 부분 위치 설정 */
 
 .fridge-img-container{
-    width: 600px;
-    height: 100%;
+    width: 520px;
+    height: auto;
+    margin-left: 8%;
 }
 
 /* 냉장고 컨테이너의 첫번쨰 자식인 냉장고 이미지 */
-.fridge-img-container > img:nth-child(1) {
+.fridge-img-container > a:nth-child(1) > img {
+    display: flex;
+    flex-direction: center;
     width: 100%;
 }
 
 /* 냉장고 컨테이너의 두번째 자식인 레시피노트 이미지 */
-.fridge-img-container > img:nth-child(2){
+.fridge-img-container > a:nth-child(2) > img{
     position: relative;
     width: 230px;
     bottom: 800px;
@@ -67,16 +75,37 @@ body{
     z-index: 50;
 }
 
+/* 냉장고에 마우스를 올렸을 때 효과 */
+.fridge-img-container > a:nth-child(1) > img:hover {
+    width: 530px;
+    transition: 0.2s;
+    transition-delay: 0.1s;
+    transition-timing-function:ease-in;
+    cursor: pointer;
+}
+
+/* 레시피 노트에 마우스를 올렸을 때 효과 */
+.fridge-img-container > a:nth-child(2) > img:hover{
+    width: 240px;
+    transition: 0.2s;
+    transition-delay: 0.1s;
+    transition-timing-function:ease;
+    cursor: pointer;
+}
+
+
+
+
+
+
 /* 냉장고 왼쪽 click fridge 설명 부분  */
 
 .clickFridge-container{
     display: flex;
     position: relative;
     flex-direction: column;
-    top: 280px;
-    left: 140px;
-    z-index: 60;
-    margin-right: 20px;
+    left: 190px;
+    top: 290px;
 }
 
 
@@ -91,8 +120,8 @@ body{
     font-family: UhBee Seulvely;
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 28px;
     text-align: right;
     text-decoration-line: underline;
 
@@ -107,31 +136,29 @@ body{
 .clickRecipe-container{
     display: flex;
     position: relative;
+    right: 100px;
+    top:90px;
     flex-direction: column;
-    top: 280px;
     z-index: 80;
 }
 
+/* 빨간 click recipe 버튼 이미지 */
 
 .clickRecipe-container > img{
-
+    margin-left: 120px;
     width: 230px;
 
 }
 
+/* click recipe 설명 부분 */
 .clickRecipe-container > div {
-
-
-
     font-family: UhBee Seulvely;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
-    line-height: 41px;
+    font-size: 20px;
+    line-height: 28px;
     text-decoration-line: underline;
-    
     color: #000000;
-    
 
 }
 
