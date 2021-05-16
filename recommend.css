@@ -59,7 +59,28 @@ img{
 <<<<<<< HEAD
 =======
 }
-.imgBox{
+.img-Box{
     display : inline-block;
+<<<<<<< HEAD
 >>>>>>> jaejun_branch
 }
+=======
+}
+.button-Box{
+    display : inline-block;
+    width: 175px;
+    height: 70px;
+    
+    left: calc(50% - 175px/2 - 307.5px);
+    top: 173px;
+
+    border: 4px solid #2D2D2D;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+.btn-group{
+    width : 500px;
+    height : 50px;
+    
+}
+>>>>>>> jaejun_branch
