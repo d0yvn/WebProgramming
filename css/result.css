@@ -23,7 +23,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-content: center;
-    height: 50px;
+    height: 55px;
     background-color: #FFCD1D;
 }
 
@@ -42,6 +42,7 @@ body {
     text-decoration: none;
     color: #CD0000;
     margin-left: 30px;
+    flex-wrap: nowrap;
 }
 
 
@@ -60,6 +61,7 @@ body {
     text-decoration: none;
     color: #000000;
     margin-right: 35px;
+    flex-wrap: nowrap;
 }
 
 .menu-bar a:nth-child(2){
@@ -94,22 +96,8 @@ body {
 
 
 
+/* 메뉴 추천 띄워주는 콘텐츠 부분 전체 */
 
-/* .menu-result>div{
-    background-image: url("../img/dumpling-soup-img.png");
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    width: 350px;
-    border-radius: 7px;
-}
-
-.menu-result>div:hover{
-    border: 8px solid #ffc800;
-    border-radius: 7px;
-    transition:0.2s;     
-} */
 
 .result-content-container{
     display: flex;
@@ -118,26 +106,28 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .result-content-container > h3 {
     font-family: 'UhBeeSeulvely';
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 23px;
     line-height: 33px;
     text-align: center;
+    margin-bottom: 10px;
 
     color: #000000;
 }
 
+/* 오늘 한끼 때우고 싶은 당신의 메뉴는? 부분 */
 
 .result-content-container > h3 >span {
     font-family: 'UhBeeSeulvely';
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 23px;
     line-height: 33px;
     /* or 110% */
 
@@ -146,6 +136,8 @@ body {
 
     color: #CD0000;
 }
+
+/* 메뉴 추천 두개 이미지 뜨는 부분 */
 
 figure.snip1384 {
   font-family: 'Raleway', Arial, sans-serif;
@@ -275,11 +267,26 @@ figure.snip1384.hover i {
   opacity: 1;
 }
 
+.recommended-menu {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
 
+
+
+/* 메뉴 추천받기 버튼 */
 .remenu-btn{
-    width: 350px;
+    width: 300px;
     height: auto;
     cursor: pointer;
+    margin-top: 40px;
 }
 
 
