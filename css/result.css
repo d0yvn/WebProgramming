@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
 @font-face {
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff') format('woff');
-    font-style: normal;
-    font-weight: normal;
-    }
+  font-family: 'UhBeeSeulvely';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
 
 * {
     padding: 0;
