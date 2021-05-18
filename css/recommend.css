@@ -103,12 +103,17 @@ p {
     background: red;
 }
 
+.filter-option-inner-inner {
+    font-size: 20px;
+    line-height: 40px;
+}
+
 .rcp-thm {
     background: #FFCD1D;
     margin: 6px;
 }
 
-.selected-label {
+.rcp-thm.selected {
     background-color: #DAA520;
 }
 
