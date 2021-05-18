@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@font-face {
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
 * {
     text-align: center;
     box-sizing: border-box;
@@ -50,7 +57,7 @@ img {
 
 #font-ko,
 h2 {
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'UhBeeSeulvely', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
@@ -58,7 +65,7 @@ h2 {
 }
 
 #font-ko1 {
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'UhBeeSeulvely', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -67,7 +74,7 @@ h2 {
 
 #font-ko2,
 p {
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'UhBeeSeulvely', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 19px;
@@ -97,10 +104,6 @@ p {
 
 .btn-ingredient p {
     margin-bottom: 0;
-}
-
-.selectpicker {
-    background: red;
 }
 
 .rcp-thm {
