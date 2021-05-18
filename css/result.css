@@ -191,8 +191,8 @@ figure.snip1384 .links {
 figure.snip1384 h3 {
   font-family: 'Roboto';
 font-style: normal;
-font-weight: bold;
-font-size: 22px;
+font-weight: 700;
+font-size: 20px;
 line-height: 30px;
 display: flex;
 align-items: center;
@@ -207,9 +207,9 @@ color: #FFC700;
 }
 figure.snip1384 p {
     font-family: 'Roboto';
-    font-style: light;
-    font-weight: 500;
-    font-size: 14px;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 13px;
     line-height: 21px;
     display: flex;
     align-items: center;
@@ -271,14 +271,16 @@ figure.snip1384.hover i {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 17px;
     display: flex;
     align-items: center;
     text-align: center;
     color: #000000;
 }
 
+.menu1{
+  margin-bottom: 20px;
+}
 
 
 /* 메뉴 추천받기 버튼 */
