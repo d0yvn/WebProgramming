@@ -6,6 +6,8 @@
     font-style: normal;
     }
 
+    
+
 * {
     padding: 0;
     margin: 0;
@@ -32,7 +34,7 @@ body {
 .title {
     display: flex;
     align-items: center;
-    font-family: Caveat Brush;
+    font-family: 'Caveat Brush';
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -51,7 +53,7 @@ body {
 
     display: flex;
     align-items: center;
-    font-family: UhBeeSeulvely;
+    font-family: 'UhBeeSeulvely';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -122,7 +124,7 @@ body {
 }
 
 .result-content-container > h3 {
-    font-family:UhBeeSeulvely;
+    font-family:'UhBeeSeulvely';
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -134,7 +136,7 @@ body {
 
 
 .result-content-container > h3 >span {
-    font-family: UhBeeSeulvely;
+    font-family: 'UhBeeSeulvely';
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -197,7 +199,7 @@ figure.snip1384 .links {
   padding: 0;
 }
 figure.snip1384 h3 {
-  font-family: Roboto;
+  font-family: 'Roboto';
 font-style: normal;
 font-weight: bold;
 font-size: 22px;
@@ -214,7 +216,7 @@ color: #FFC700;
   opacity: 0; */
 }
 figure.snip1384 p {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: light;
     font-weight: 500;
     font-size: 14px;
