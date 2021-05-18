@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@font-face {
+    font-family: 'UhBeeSeulvely';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
 * {
     padding: 0;
     margin: 0;
@@ -43,7 +51,7 @@ body {
 
     display: flex;
     align-items: center;
-    font-family: UhBee Seulvely;
+    font-family: UhBeeSeulvely;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -114,7 +122,7 @@ body {
 }
 
 .result-content-container > h3 {
-    font-family: UhBee Seulvely;
+    font-family:UhBeeSeulvely;
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -126,7 +134,7 @@ body {
 
 
 .result-content-container > h3 >span {
-    font-family: UhBee Seulvely;
+    font-family: UhBeeSeulvely;
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
