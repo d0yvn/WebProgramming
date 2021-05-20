@@ -41,7 +41,7 @@
         </div>
     </nav>
 
-    <!--요리메뉴추천받기-->
+
     <div class="container-fluid mt-5">
         <div class="info">
             <h2 id="font-ko">요리 메뉴 추천받기</h2>
@@ -63,133 +63,136 @@
             <img src="/img/2.png" alt="">
             <p id="font-ko1"><span id="font-en1">Step4</span> 요리 메뉴 추천하기</p>
         </div>
+
     </div>
-    <!--STEP.1 가진 재료 고르기-->
-    <div class="container-fluid mt-5" id="font-ko2">
-        <div class="info">
-            <h2><span id="font-en">STEP 1. </span>가진 재료 고르기</h2>
-            <p>현재 가지고 있는 재료를 고르세요!<br>각 카테고리마다 5개 이하로만 선택 가능합니다.
-            </p>
+    <form action="/post" method="post">
+        <div class="container-fluid mt-5" id="font-ko1">
+            <div class="info">
+                <h2><span id="font-en">STEP 1. </span>가진 재료 고르기</h2>
+                <p>현재 가지고 있는 재료를 고르세요!<br>각 카테고리마다 5개 이하로만 선택 가능합니다.
+                </p>
+            </div>
+
+            <!--육류-->
+            <div class="btn-ingredient">
+                <p>육류</p>
+                <select class="selectpicker" name="ingredients" multiple="multiple">
+                    <option value = "beef">소고기</option>
+                    <option value = "닭고기">닭고기</option>
+                    <option value = "돼지고기">돼지고기</option>
+                    <option value = "스팸">스팸</option>     
+                </select>
+            </div>
+
+            <div class="btn-ingredient" name="ingredients">
+                <p>채소/버섯류</p>
+                <select class="selectpicker" name="ingredients" multiple="multiple">
+                    <option>감자</option>
+                    <option>당근</option>
+                    <option>양배추</option>
+                    <option>파</option>
+                    <option>시금치</option>
+                    <option>마늘</option>
+                    <option>상추</option>
+                    <option>고추</option>
+                    <option>오이</option>
+                    <option>파프리카</option>
+                    <option>고구마</option>
+                    <option>콩나물</option>
+                    <option>가지</option>
+                    <option>애호박</option>
+                </select>
+            </div>
+
+            <div class="btn-ingredient" name="ingredients">
+                <p>해산류</p>
+                <select class="selectpicker" name="ingredients" multiple="multiple">
+                    <option>새우</option>
+                    <option>오징어</option>
+                    <option>고등어</option>
+                    <option>굴</option>
+                    <option>꼬막</option>
+                    <option>꽃게</option>
+                </select>
+            </div>
+
+            <div class="btn-ingredient">
+                <p>소스/시즈닝류</p>
+                <select class="selectpicker" name="ingredients" multiple="multiple">
+                    <option>소주</option>
+                    <option>청주</option>
+                    <option>와이트와인</option>
+                    <option>굴소스</option>
+                </select>
+            </div>
+            <div class="btn-ingredient">
+                <p>가공식품류</p>
+                <select class="selectpicker" name="ingredients" multiple="multiple">
+                    <option>일반라면</option>
+                    <option>짜파게티</option>
+                    <option>만두</option>
+                </select>
+            </div>
+            <div class="btn-ingredient">
+                <p>달걀/유제품류</p>
+                <select class="selectpicker" name="ingredients" multiple="multiple">
+                    <option>달걀</option>
+                    <option>유제품</option>
+                </select>
+            </div>
         </div>
 
-        <div class="btn-ingredient">
-            <p>육류</p>
-            <select class="selectpicker" multiple>
-                <option>소고기</option>
-                <option>닭고기</option>
-                <option>돼지고기</option>
-                <option>스팸</option>     
-            </select>
+        <div class="container-fluid mt-5" id="font-ko1">
+            <div class="info">
+                <h2><span id="font-en">STEP 2. </span>요리 테마 선택하기</h2>
+                <p>현재 가지고 있는 재료를 고르세요!<br>각 카테고리마다 5개 이하로만 선택 가능합니다.
+                </p>
+            </div>
+
+            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" name="category" value="일식">
+            <label class="btn rcp-thm" for="btncheck1">#일식</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" name="category" value="한식">
+            <label class="btn rcp-thm" for="btncheck2">#한식</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" name="category" value="중식">
+            <label class="btn rcp-thm" for="btncheck3">#중식</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off" name="category" value="양식">
+            <label class="btn rcp-thm" for="btncheck4">#양식</label>
+            <br>
+            <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off" name="category" value="푸짐한 한끼">
+            <label class="btn rcp-thm" for="btncheck5">#푸짐한 한끼</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off" name="category" value="밑반찬">
+            <label class="btn rcp-thm" for="btncheck6">#밑반찬</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off" name="category" value="면류">
+            <label class="btn rcp-thm" for="btncheck7">#면류</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck8" autocomplete="off" name="category" value="맛있는 안주">
+            <label class="btn rcp-thm" for="btncheck8">#맛있는 안주</label>
+            <br>
+
         </div>
-        <div class="btn-ingredient">
-            <p>채소/버섯류</p>
-            <select class="selectpicker" multiple>
-                <option>감자</option>
-                <option>당근</option>
-                <option>양배추</option>
-                <option>파</option>
-                <option>시금치</option>
-                <option>마늘</option>
-                <option>상추</option>
-                <option>고추</option>
-                <option>오이</option>
-                <option>파프리카</option>
-                <option>고구마</option>
-                <option>콩나물</option>
-                <option>가지</option>
-                <option>애호박</option>
-            </select>
+        <div class="container-fluid  mt-5">
+            <div class="info">
+                <h2><span id="font-en">STEP 3. </span>요리 방식 선택하기</h2>
+                <p>현재 가지고 있는 재료를 고르세요!<br>각 카테고리마다 5개 이하로만 선택 가능합니다.
+                </p>
+            </div>
+            <input type="checkbox" class="btn-check" id="btncheck9" autocomplete="off" name="time" value="1">
+            <label class="btn rcp-thm" id="font-ko2" for="btncheck9">그냥 한끼 때울래요</label>
+            <input type="checkbox" class="btn-check" id="btncheck10" autocomplete="off" name="time" value="2">
+            <label class="btn rcp-thm" id="font-ko2" for="btncheck10">제대로 해먹어 볼래요</label>
         </div>
-
-        <div class="btn-ingredient">
-            <p>해산류</p>
-            <select class="selectpicker" multiple>
-                <option>새우</option>
-                <option>오징어</option>
-                <option>고등어</option>
-                <option>굴</option>
-                <option>꼬막</option>
-                <option>꽃게</option>
-            </select>
+        <input type="submit" class="reco-box mt-5" id="font-ko1" value="메뉴 추천받으러 가기">
         </div>
-
-        <div class="btn-ingredient">
-            <p>소스/시즈닝류</p>
-            <select class="selectpicker" multiple>
-                <option>소주</option>
-                <option>청주</option>
-                <option>와이트와인</option>
-                <option>굴소르</option>
-            </select>
-        </div>
-        <div class="btn-ingredient">
-            <p>가공식품류</p>
-            <select class="selectpicker" multiple>
-                <option>일반라면</option>
-                <option>짜파게티</option>
-                <option>만두</option>
-            </select>
-        </div>
-        <div class="btn-ingredient">
-            <p>달걀/유제품류</p>
-            <select class="selectpicker" multiple>
-                <option>달걀</option>
-                <option>유제품</option>
-            </select>
-        </div>
-    </div>
-    <!-- STEP2. 요리테마선택하기 -->
-    <div class="container-fluid mt-5" id="font-ko1">
-        <div class="info">
-            <h2><span id="font-en">STEP 2. </span>요리 테마 선택하기</h2>
-            <p>현재 가지고 있는 재료를 고르세요!<br>각 카테고리마다 5개 이하로만 선택 가능합니다.
-            </p>
-        </div>
-
-        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-        <label class="btn rcp-thm" for="btncheck1">#일식</label>
-
-        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-        <label class="btn rcp-thm" for="btncheck2">#한식</label>
-
-        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-        <label class="btn rcp-thm" for="btncheck3">#중식</label>
-
-        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-        <label class="btn rcp-thm" for="btncheck4">#양식</label>
-        <br>
-        <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
-        <label class="btn rcp-thm" for="btncheck5">#푸짐한 한끼</label>
-
-        <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
-        <label class="btn rcp-thm" for="btncheck6">#밑반찬</label>
-
-        <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off">
-        <label class="btn rcp-thm" for="btncheck7">#면류</label>
-
-        <input type="checkbox" class="btn-check" id="btncheck8" autocomplete="off">
-        <label class="btn rcp-thm" for="btncheck8">#맛있는 안주</label>
-        <br>
-    </div>
-    <!--STEP3. 요리방식 선택하기-->
-    <div class="container-fluid  mt-5">
-        <div class="info">
-            <h2><span id="font-en">STEP 3. </span>요리 방식 선택하기</h2>
-            <p>현재 가지고 있는 재료를 고르세요!<br>각 카테고리마다 5개 이하로만 선택 가능합니다.
-            </p>
-        </div>
-        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-        <label class="btn rcp-thm" id="font-ko2" for="btncheck4">그냥 한끼 때울래요</label>
-        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-        <label class="btn rcp-thm" id="font-ko2" for="btncheck4">제대로 해먹어 볼래요</label>
-    </div>
+    </form>
 
 
-    <div class="reco-boxc mt-5">
-        <div id="reco-box">
-            <a href="#" id="font-ko">메뉴 추천받으러 가기</a>
-        </div>
-    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <script src="/js/recommend.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
