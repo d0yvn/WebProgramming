@@ -144,16 +144,18 @@ p {
 
 /*.filter-option기존내장효과지우기*/
 
-.rcp-thm {
+.rcp-thm,
+.rcp-time {
     background: #FFCD1D;
     margin: 6px;
 }
 
-.rcp-thm.selected {
+.rcp-thm.selected,
+.rcp-time.selected {
     background-color: #DAA520;
 }
 
-.reco-box {
+.submit {
     background: #FFCD1D;
     border: 5x solid #000000;
     box-sizing: border-box;

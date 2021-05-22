@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!--bootstrap cdn-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
@@ -22,6 +23,10 @@
     <!-- 폰트 추가 Gamja Flower-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+
+
+    <!-- jquert -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
 </head>
 
@@ -66,7 +71,7 @@
 
     </div>
     <form action="/post" method="post">
-        <div class="container-fluid mt-5" id="font-ko1">
+        <div class="container-fluid mt-5 step-1" id="font-ko1">
             <div class="info">
                 <h2><span id="font-en">STEP 1. </span>가진 재료 고르기</h2>
                 <p>현재 가지고 있는 재료를 고르세요!<br>각 카테고리마다 5개 이하로만 선택 가능합니다.
@@ -142,7 +147,7 @@
             </div>
         </div>
 
-        <div class="container-fluid mt-5" id="font-ko1">
+        <div class="container-fluid mt-5 step-2" id="font-ko1">
             <div class="info">
                 <h2><span id="font-en">STEP 2. </span>요리 테마 선택하기</h2>
                 <p>현재 가지고 있는 재료를 고르세요!<br>각 카테고리마다 5개 이하로만 선택 가능합니다.
@@ -175,18 +180,18 @@
             <br>
 
         </div>
-        <div class="container-fluid  mt-5">
+        <div class="container-fluid mt-5 step-3">
             <div class="info">
                 <h2><span id="font-en">STEP 3. </span>요리 방식 선택하기</h2>
                 <p>현재 가지고 있는 재료를 고르세요!<br>각 카테고리마다 5개 이하로만 선택 가능합니다.
                 </p>
             </div>
             <input type="checkbox" class="btn-check" id="btncheck9" autocomplete="off" name="time" value="1">
-            <label class="btn rcp-thm" id="font-ko2" for="btncheck9">그냥 한끼 때울래요</label>
+            <label class="btn rcp-time" id="font-ko2" for="btncheck9">그냥 한끼 때울래요</label>
             <input type="checkbox" class="btn-check" id="btncheck10" autocomplete="off" name="time" value="2">
-            <label class="btn rcp-thm" id="font-ko2" for="btncheck10">제대로 해먹어 볼래요</label>
+            <label class="btn rcp-time" id="font-ko2" for="btncheck10">제대로 해먹어 볼래요</label>
         </div>
-        <input type="submit" class="reco-box mt-5" id="font-ko1-ubs" value="메뉴 추천받으러 가기">
+        <input type="submit" class="submit mt-5" id="font-ko1-ubs" value="메뉴 추천받으러 가기">
         </div>
     </form>
 
