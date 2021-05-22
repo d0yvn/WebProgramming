@@ -37,6 +37,9 @@ img {
     border-bottom: 10px solid red;
 }
 
+
+/* font 관련 css font-[ko/en][fontSize]-[fontFamily] */
+
 #font-en {
     font-family: Caveat Brush;
     font-style: normal;
@@ -59,6 +62,15 @@ img {
 #font-ko,
 h2 {
     /* pre font 'Gamja Flower'*/
+    font-family: Roboto, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 29px;
+}
+
+#font-ko-ubs {
+    /* pre font 'Gamja Flower'*/
     font-family: UhBeeSeulvely, cursive;
     font-style: normal;
     font-weight: normal;
@@ -67,16 +79,25 @@ h2 {
 }
 
 #font-ko1 {
-    font-family: UhBeeSeulvely, cursive;
+    font-family: Roboto, cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 29px;
 }
 
+#font-ko1-ubs {
+    font-family: UhBeeSeulvely, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: black;
+}
+
 #font-ko2,
 p {
-    font-family: UhBeeSeulvely, cursive;
+    font-family: Roboto, cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 19px;
