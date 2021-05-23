@@ -1,0 +1,129 @@
+* {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 755px;
+    background: #FFFDF8;
+}
+
+img {
+    width: 277px;
+    height: 181.82px;
+    left: 360px;
+    top: 357px;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    background: #FFCD1D;
+    clear: both;
+}
+
+.nav-item:first {
+    color: red;
+    border-bottom: 10px solid red;
+}
+
+#font-en {
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 44px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #CD0000;
+}
+
+#font-en1 {
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-size: 21px;
+    color: #DAA520;
+}
+
+#font-ko,
+h2 {
+    font-family: 'Gamja Flower', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 29px;
+}
+
+#font-ko1 {
+    font-family: 'Gamja Flower', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+#font-ko2,
+p {
+    font-family: 'Gamja Flower', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 29px;
+}
+
+.img-box {
+    display: inline-block;
+}
+
+.btn-group {
+    margin: 7px;
+}
+
+.btn-ingredient {
+    display: inline-block;
+}
+
+.btn-ingredient .btn {
+    width: 175px;
+    height: 62px;
+    border: 4px solid rgba(0, 0, 0, 0.164);
+    background-color: #ffce1ddc;
+    border-radius: 40px;
+    font-size: 23px;
+}
+
+.btn-ingredient p {
+    margin-bottom: 0;
+}
+
+.rcp-thm {
+    background: #FFCD1D;
+    margin: 6px;
+}
+
+.selected-label {
+    background-color: #DAA520;
+}
+
+.reco-boxc {
+    text-align: center;
+}
+
+#reco-box {
+    background: #FFCD1D;
+    border: 7px solid #000000;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    line-height: 100px;
+    width: 400px;
+    height: 100px;
+    border-radius: 300px / 100px;
+}
+
+#reco-box a {
+    text-decoration: none;
+}
