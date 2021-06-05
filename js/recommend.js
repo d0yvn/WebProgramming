@@ -21,28 +21,33 @@ window.onclick = function(event) {
         // js코드 따로 안써도 선택시 selected class 붇어줌
         step1_cnt = step1.getElementsByClassName('selected').length;
     } else if (event.target.matches('.rcp-thm')) {
-        event.target.classList.toggle('selected');
+        if (step2_cnt > 2) {
+            if (event.target.matches('.selected')) {
+                event.target.classList.toggle('selected');
+            } else {
+                alert('적당히 체크하세요')
+            }
+        } else {
+            event.target.classList.toggle('selected');
+            step2_cnt = step2.getElementsByClassName('selected').length;
+        }
         step2_cnt = step2.getElementsByClassName('selected').length;
         console.log(step2_cnt)
+
     } else if (event.target.matches('.rcp-time')) {
         /* 버튼 shake animation 다는 부분.. (이따 계속..) */
         if (step3_cnt > 0) {
             if (event.target.matches('.selected')) {
                 event.target.classList.toggle('selected');
             } else {
-                console.log(event.target);
-                event.target.classList.add('shake');
-                event.target.addEventListener('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(event) {
-                    console.log('animation end');
-                    event.target.classList.remove('shake')
-                })
+                alert('하나만 체크하세요')
             }
         } else {
             event.target.classList.toggle('selected');
             step3_cnt = step3.getElementsByClassName('selected').length;
-            console.log(step3_cnt)
         }
         step3_cnt = step3.getElementsByClassName('selected').length;
+        console.log(step3_cnt)
 
     }
 
