@@ -14,13 +14,8 @@ $("input[type='submit']").click(function(event) {
 
 window.onclick = function(event) {
     let success = false;
-    // console.log(event.target);
-
     // checked btn -> 'selected' class toggle시켜주기
-    if (event.target.matches('.dropdown-item')) {
-        // js코드 따로 안써도 선택시 selected class 붇어줌
-        step1_cnt = step1.getElementsByClassName('selected').length;
-    } else if (event.target.matches('.rcp-thm')) {
+    if (event.target.matches('.rcp-thm')) {
         if (step2_cnt > 2) {
             if (event.target.matches('.selected')) {
                 event.target.classList.toggle('selected');
@@ -51,17 +46,18 @@ window.onclick = function(event) {
 
     }
 
+
     /* 체크 다 안채우고 form submit 버튼 누르면 alert 띄어줌 */
     if (event.target.matches('.submit')) {
+        step1_cnt = step1.getElementsByClassName('selected').length;
+
         if (step1_cnt == 0) {
-            window.alert('Please check your ingredients')
+            window.alert('재료를 마저 선택해주세요')
 
         } else if (step2_cnt == 0) {
-            window.alert('Please check your recipe theme')
+            window.alert('요리 테마를 마저 선택해주세요')
         } else if (step3_cnt == 0) {
-            window.alert('Please check recipe time you want')
-        } else if (step3_cnt > 1) {
-            window.alert('Please choose just one at step3')
+            window.alert('요리 방식을 마저 선택해주세요')
         } else {
             success = true;
         }
