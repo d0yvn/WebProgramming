@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/388f753882.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <form action="/users/login" method = "post">
+                    <div class="control-group">
+                        <div class = "form-group floating-label-form-group controls">
+                            <label>Id</label>
+                            <input type="text" class = "form-control" placeholder="UserName" id = "username" name = "username">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class = "form-group floating-label-form-group controls">
+                            <label>Password</label>
+                            <input type="password" class = "form-control" placeholder = "Password" id = "password" name = "password">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button class="submit" id="btn btn_primary">Login</button>
+                    </div>
+                </form>
+
+                <a href="/auth/register" onclick="window.open(this.href,'_blank','width=800, height=600'); return false;">
+                    <p>회원가입</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
