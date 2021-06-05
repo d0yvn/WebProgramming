@@ -168,3 +168,23 @@ p {
     background-position: center;
     background-size: auto;
 }
+
+
+/* 초과 클릭시 버튼 비활성화 후 shake animation */
+
+.shake {
+    -webkit-animation: boxmove 0.1s linear 3 alternate;
+    -moz-animation: boxmove 0.1s linear 3 alternate;
+    -ms-animation: boxmove 0.1s linear 3 alternate;
+    -o-animation: boxmove 0.1s linear 3 alternate;
+    animation: boxmove 0.1s linear 3 alternate;
+}
+
+@keyframes boxmove {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 3px;
+    }
+}
