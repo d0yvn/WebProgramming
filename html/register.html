@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+ <HEAD>
+  <TITLE> JOIN </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+
+<link rel="stylesheet" href="../css/register.css">
+<script>
+	function check1(){
+		var frm=document.enroll;
+		frm.checkid.value=1;
+	}
+
+	function enter(){
+
+	var frm=document.enroll;
+
+	if(frm.id.value.length<3){
+		alert("아이디는 3자 이상 입력해주세요.");
+		return;
+	}
+
+	 if(frm.checkid.value==0)
+	{
+		alert("중복확인을 눌러주세요.");
+		return;
+	}
+
+	if(frm.pwd.value.length<4){
+		alert("비밀번호는 4자이상 입력해주세요.");
+		return;
+	}
+	if(frm.pwd1.value!=frm.pwd.value){
+		alert("비밀번호가 다릅니다.");
+		return;
+	}
+	if(frm.name.value.length<1){
+		alert("이름을 입력해주세요.");
+		return;
+	}
+	if(frm.sex.value==""){
+		alert("성별을 선택해주세요.");
+		return;
+	}
+	if(frm.email.value.length<1 || frm.e_domain.value.length<1){
+		alert("이메일을 입력해주세요.");
+		return;
+	}
+	
+	frm.method="get";
+	frm.action="./join.html";
+	frm.submit(); 
+	}
+	function checkid(){
+
+		var frm=document.enroll;
+
+		var regExp=/^([/\w/g\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+
+		
+
+		if(!regExp.test(frm.email.value)){
+
+			alert('올바른 email을 입력해주세요.');
+
+			frm.email.focus();
+
+		}
+
+	}
+
+
+
+
+	function domainCheck(){
+
+		var frm=document.enroll;
+
+		if(frm.domain.value==0){
+			frm.e_domain.value="";
+			frm.e_domain.disabled=false;
+
+		}else{
+			frm.e_domain.value=frm.domain.value;
+			frm.e_domain.disabled=true;
+
+		}
+
+	}
+
+ </script>
+ </HEAD>
+ <BODY bgcolor="#FFDF24"> 
+
+	<form name="enroll" method="post">
+	<table height="90" align="center" style="background-color:#FFDF24">
+	<tr>	
+		<td><div id="main-title" class="mo">회원가입</div></td>
+		<td><div id="sub-title" class="mo"> | 아이디와 비밀번호를 입력하여 회원가입 하시고 저희 서비스를 편하게 이용하세요</td>
+	 </tr>
+
+	 <table width="550" height="300" align="center" style="background-color:#FFDF24; border:solid 4px #000000; "  class="mo">
+		
+			<tr>
+				<td>
+					<table align="center" border=1 style="background-color:white; border-color:#FFDF24;" width="600">
+			<tr>			
+
+				<td style="text-align:center">아이디</td>
+				<td style="color:red; font-size:10px;"><input type="text" name="id" value="">
+				<input type="button" name="id1" value="중복확인" onClick="check1()" > 최소 3자이상 입력하세요.
+				<input type="hidden" name="checkid" value="0"></td>
+			</tr>
+			<tr>
+				<td style="text-align:center;">비밀번호</td> 
+				<td ><input type="password" name="pwd" value=""><img src="../img/lock.png" height="25px" align="center"></td>
+			</tr>
+			<tr>
+				<td style="text-align:center;">비밀번호 확인</td> 
+				<td><input type="password" name="pwd1" value=""> <img src="../img/lock2.png" height="23px" align="center"></td>
+			</tr>
+			<tr>
+				<td style="text-align:center;">이름</td> 
+				<td style="color:red; font-size:10px;"><input type="name" name="name" value=""> (공백 없이 한글만 입력가능)</td>
+			</tr>
+			<tr>
+				<td style="text-align:center;">성별</td> <td><input type="radio" name="sex" value="1">남자
+				<input type="radio" name="sex" value="2">여자</td>
+			</tr>
+			
+			<tr>
+				<td style="text-align:center;">E-mail</td>
+				<td><input type="text" name="email" style="width:80" onblur="checkid()"> @
+				<input type="text" name="e_domain" style="width:80">
+				<select name="domain" onchange="domainCheck();">
+				<option value ="0" selected="selected">직접입력</option>
+				<option value ="naver.com" >naver.com</option>
+				<option value ="hanmail.net">hanmail.net</option>
+				<option value ="nate.com">nate.com</option> 
+				<option value ="yahoo.com">yahoo.com</option>		</select></td></tr>
+		
+			<tr>
+				<td style="text-align:center;">자기소개</td> 
+				<td><textarea name="fcontent" rows="13" cols="57" onfocus="this.value=null;">내용을 적으세요...</textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="color:blue"> * 원하시는 서비스에 체크해주세요.</td>
+			</tr>
+			<tr>
+				<td style="text-align:center;">메일링서비스</td>
+				<td><input type="checkbox" name="check" value="check1">정보 메일을 수신합니다.</td>
+			</tr>
+			<tr>
+				<td style="text-align:center;">SNS 서비스</td>
+				<td><input type="checkbox" name="check" value="check2">핸드폰 문자메세지를 수신합니다.</td>
+			</tr>
+					</table>
+				</td>
+			</tr>
+			
+		</table>
+		<table align="center" style="background-color:#FFDF24;">
+	  <tr>	
+		<td><input type="button"  value="가입" style="background-color:#050099; border:solid 5px #000000; color:white;" onClick="javascript:enter()">
+			<a href="./login.html">
+			<input type="button" value="취소" style="background-color:#050099; border:solid 5px #000000; color:white;"></a></td>	
+	 </tr>
+	 </form>
+ </BODY>			
+</HTML>

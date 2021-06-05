@@ -14,7 +14,7 @@ $("input[type='submit']").click(function(event) {
 
 window.onclick = function(event) {
     let success = false;
-    console.log(event.target);
+    // console.log(event.target);
 
     // checked btn -> 'selected' class toggle시켜주기
     if (event.target.matches('.dropdown-item')) {
@@ -26,19 +26,20 @@ window.onclick = function(event) {
         console.log(step2_cnt)
     } else if (event.target.matches('.rcp-time')) {
         /* 버튼 shake animation 다는 부분.. (이따 계속..) */
-        if (step3_cnt > 0) { // 😒☺️😊😩😊😩😩😊😒😏여기부터 수정 😁☺️😘😘😩😁😳😩😔
+        if (step3_cnt > 0) {
             if (event.target.matches('.selected')) {
                 event.target.classList.toggle('selected');
             } else {
-                console.log(event.target.previousSibling);
-                event.target.previousSibling.classList.add('shake');
-                event.target.previousSibling.addEventListener('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(event) {
+                console.log(event.target);
+                event.target.classList.add('shake');
+                event.target.addEventListener('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(event) {
                     console.log('animation end');
                     event.target.classList.remove('shake')
                 })
             }
         } else {
             event.target.classList.toggle('selected');
+            step3_cnt = step3.getElementsByClassName('selected').length;
             console.log(step3_cnt)
         }
         step3_cnt = step3.getElementsByClassName('selected').length;
