@@ -109,13 +109,11 @@ body {
     margin-top: 30px;
 }
 
-/* 오늘 한끼 때우고 싶은 당신의 메뉴는? 부분 */
-
 .result-content-container > h3 {
     font-family: 'UhBeeSeulvely';
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 23px;
     line-height: 33px;
     text-align: center;
     margin-bottom: 10px;
@@ -123,7 +121,7 @@ body {
     color: #000000;
 }
 
-
+/* 오늘 한끼 때우고 싶은 당신의 메뉴는? 부분 */
 
 .result-content-container > h3 >span {
     font-family: 'UhBeeSeulvely';
@@ -187,20 +185,18 @@ figure.snip1384 figcaption {
 figure.snip1384 h3,
 figure.snip1384 .links {
   width: 100%;
-  margin: 5px ;
+  margin: 5px 0;
   padding: 0;
 }
 figure.snip1384 h3 {
   font-family: 'Roboto';
 font-style: normal;
-font-weight: 700;
-font-size: 20px;
+font-weight: bold;
+font-size: 22px;
 line-height: 30px;
 display: flex;
 align-items: center;
 text-align: center;
-margin-left: 35px;
-margin-top: 22px;
 opacity: 0;
 color: #FFC700;
   /* line-height: 1.1em;
@@ -211,12 +207,10 @@ color: #FFC700;
 }
 figure.snip1384 p {
     font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 13px;
+    font-style: light;
+    font-weight: 500;
+    font-size: 14px;
     line-height: 21px;
-    margin-left: 35px;
-    
     display: flex;
     align-items: center;
     text-align: center;
@@ -277,16 +271,14 @@ figure.snip1384.hover i {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 18px;
+    line-height: 23px;
     display: flex;
     align-items: center;
     text-align: center;
     color: #000000;
 }
 
-.menu1{
-  margin-bottom: 20px;
-}
 
 
 /* 메뉴 추천받기 버튼 */
@@ -294,7 +286,7 @@ figure.snip1384.hover i {
     width: 300px;
     height: auto;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 
