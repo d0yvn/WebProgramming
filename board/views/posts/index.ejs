@@ -6,11 +6,44 @@
   <body>
     <%- include('../partials/nav') %>
 
-    <div class="container mb-3">
+    <div class="container mb-3" style="margin-top: 2rem;">
 
-      <h2 class="mb-3">사용자 요리 게시판</h2>
+      <h2 class="mb-3" style="font-family: 'UhBeeSeulvely';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      ">사용자 요리 게시판</h2>
 
-      <table class="board-table table table-sm border-bottom">
+      <div style="display: flex; justify-content: right;">
+        <a class="btn btn-primary" href="/posts/new">글쓰기</a>
+      </div>
+
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+          <% posts.forEach(function(post) { %>
+          <div class="card" style="width: 18rem; margin: 1.5rem 0; background-color: #FFCD1D;">
+            <img src="<%= post.image %>" class="card-img-top" alt="..." style="width: 18rem; height: 300px; object-fit: cover;" >
+            <div class="card-body">
+              <h5 class="card-title"><a href="/posts/<%= post._id %>"></a><div class="ellipsis" style="font-family: 'UhBeeSeulvely';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 19px;"><%= post.title %></div></a></h5>
+              <p class="date"><span style = "font-family: 'Roboto';
+                font-size: 15px;" data-date="<%= post.createdAt %>"></span></p>
+              <a href="/posts/<%= post._id %>" style="background-color: #CD0000; font-family: 'Roboto';
+                font-size: 15px; font-weight: 500;
+                border: none;" class="btn btn-primary">자세히 보기</a>
+            </div>
+          </div>
+          <% }) %>
+      </div>
+
+
+
+
+      <!-- <table class="board-table table table-sm border-bottom">
 
         <thead class="thead-light">
           <tr>
@@ -31,17 +64,14 @@
                 <a href="/posts/<%= post._id %>"><div class="ellipsis"><%= post.title %></div></a>
               </td>
               <td class="date">
-                <span data-date="<%= post.createdAt %>"></span> <!-- 1 -->
-              </td>
+                <span data-date="<%= post.createdAt %>"></span> 
             </tr>
           <% }) %>
         </tbody>
+      </table> -->
 
-      </table>
-
-      <div>
-        <a class="btn btn-primary" href="/posts/new">글쓰기</a>
-      </div>
+      
+     
 
     </div>
   </body>

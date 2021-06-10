@@ -8,30 +8,47 @@
   <body>
     <%- include('../partials/nav') %>
 
-    <div class="container mb-3">
+    <div class="container mb-3" style="margin-top: 2rem;">
 
-      <nav aria-label="breadcrumb"> <!-- 1 -->
+      <!-- <nav aria-label="breadcrumb"> 
         <ol class="breadcrumb p-1 pl-2 pr-2">
           <li class="breadcrumb-item"><a href="/posts">사용자 요리 게시판</a></li>
           <li class="breadcrumb-item active" aria-current="page">글쓰기</li>
         </ol>
-      </nav>
+      </nav> -->
+
+      <h2 class="mb-3" style="font-family: 'UhBeeSeulvely';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      ">글 작성하기</h2>
 
       <form action="/posts" method="post">
 
+        <div class="form-group" style="margin-top: 2rem;">
+          <label for="title" style=" font-family: 'UhBeeSeulvely'; font-size:21px;">제목</label>
+          <input type="text" id="title" name="title" value="" class="form-control"  style=" border-color: black; border-width: 2px;">
+        </div>
+
         <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" id="title" name="title" value="" class="form-control">
+          <label for="title" style=" font-family: 'UhBeeSeulvely'; font-size:21px;">이미지</label>
+          <input type="file" id="image" name="image" value="" class="form-control" style=" border: none;">
         </div>
         
         <div class="form-group">
-          <label for="body">Body</label>
-          <textarea id="body" name="body" rows="5" class="form-control"></textarea>
+          <label for="body" style=" font-family: 'UhBeeSeulvely'; font-size:21px; ">내용</label>
+          <textarea id="body" name="body" rows="5" class="form-control " style=" border-color: black; border-width: 2px;"></textarea>
         </div>
 
         <div>
-          <a class="btn btn-primary" href="/posts">뒤로가기</a>
-          <button type="submit" class="btn btn-primary">완료</button>
+          <a class="btn btn-primary" href="/posts" style="background-color: #CD0000; font-family: 'Roboto';
+          font-size: 15px; font-weight: 500;
+          border: none;">뒤로가기</a>
+          <button type="submit" class="btn btn-primary" style="background-color: #CD0000; font-family: 'Roboto';
+                font-size: 15px; font-weight: 500;
+                border: none;">완료</button>
         </div>
 
       </form>
