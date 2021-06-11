@@ -34,6 +34,14 @@ app.use(methodOverride('_method'));
 app.use('/', require('./routes/home'));
 app.use('/posts', require('./routes/posts'));
 
+// Custom Middlewares
+app.use(function(req,res,next){
+  res.locals.isAuthenticated = req.isAuthenticated();
+  res.locals.currentUser = req.user;
+  res.locals.util = util; // 1
+  next();
+});
+
 // Port setting
 var port = 3000;
 app.listen(port, function(){
