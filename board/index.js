@@ -3,6 +3,9 @@ var mongoose = require('mongoose');
 
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+
+var session = require('express-session');
+var passport = require('./config/passport'); //1
 var app = express();
 
 // DB setting
@@ -33,6 +36,7 @@ app.use(methodOverride('_method'));
 // Routes
 app.use('/', require('./routes/home'));
 app.use('/posts', require('./routes/posts'));
+app.use('/users', require('./routes/users')); // 1
 
 // Custom Middlewares
 app.use(function(req,res,next){
@@ -41,6 +45,10 @@ app.use(function(req,res,next){
   res.locals.util = util; // 1
   next();
 });
+// Passport // 2
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Port setting
 var port = 3000;

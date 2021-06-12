@@ -17,7 +17,9 @@
       ">사용자 요리 게시판</h2>
 
       <div style="display: flex; justify-content: right;">
+        <% if(isAuthenticated){ %> <!-- 1 -->
         <a class="btn btn-primary" href="/posts/new">글쓰기</a>
+        <% } %>
       </div>
 
 
@@ -29,9 +31,15 @@
               <h5 class="card-title"><a href="/posts/<%= post._id %>"></a><div class="ellipsis" style="font-family: 'UhBeeSeulvely';
                 font-style: normal;
                 font-weight: normal;
-                font-size: 19px;"><%= post.title %></div></a></h5>
+                font-size: 19px;"><%= post.title %></div>
+                <% if(post.commentCount){ %>
+                  <small class="title-comments d-inline-block pl-2">(<%= post.commentCount %>)</small>
+                <% } %>
+              </a></h5>
               <p class="date"><span style = "font-family: 'Roboto';
-                font-size: 15px;" data-date="<%= post.createdAt %>"></span></p>
+                font-size: 15px;" data-date="<%= post.createdAt %>"></span>
+                <span>Author</span> : <%= post.author ? post.author.username : "" %>
+              </p>
               <a href="/posts/<%= post._id %>" style="background-color: #CD0000; font-family: 'Roboto';
                 font-size: 15px; font-weight: 500;
                 border: none;" class="btn btn-primary">자세히 보기</a>

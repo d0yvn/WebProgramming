@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@font-face {
+  font-family: 'UhBeeSeulvely';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'UhBeeSeulvely';
+    font-size: 18px;
+    color: black;
+}
+
+.title {
+
+  float:left; width:400px; margin-left:20px; margin-top:5px;
+  color: #CD0000;
+    font-family: 'Caveat Brush';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    
+}
+nav {
+  background-color: #FFCD1D;
+    height: 50px;
+    padding: 0px;
+    display: block;
+    width: 100%;
+}
+nav ul {
+    float: right;
+    margin-top: 4px;
+}
+nav li {
+    display: inline-block;
+    height: 38px;
+    padding: 0 15px;
+}
+
+.nav li a:hover{
+  color: #CD0000;
+  border-bottom: 3px solid #CD0000;
+  transition-duration: 0.2s;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 메뉴 바 크기 및 위치, 색상에 대한 설정 */
+
+/* .menu-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    height: 55px;
+    width: auto;
+    background-color: #FFCD1D;
+    flex-wrap: nowrap;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* 왼쪽 상단 타이틀에 대한 디자인 설정 */
+
+/* a.title {
+    display: flex;
+    width: 100%; height: auto;
+    align-items: center;
+    font-family: 'Caveat Brush';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: #CD0000;
+    margin-left: 30px;
+    word-break : nowrap; 
+} */
+
+
+
+/* 메뉴 추천받기와 사용자 메뉴 게시판 두개의 메뉴에 대한 디자인 설정 */
+/* 메뉴 바에 속해있는 두번째, 세번째 자식 선택자 사용 */
+
+/* .menu-bar a:nth-child(n+2):nth-child(-n+7){
+
+    display: flex;
+    width: 100%; height: auto;
+    align-items: center;
+    font-family: 'UhBeeSeulvely';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    margin-right: 35px;
+    flex-wrap: nowrap;
+}
+
+.menu-bar a:nth-child(2){
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    margin-left: 800px;
+} */
+
+.menu-bar a:nth-child(2):hover{
+    color: #CD0000;
+    border-bottom: 3px solid #CD0000;
+    transition-duration: 0.2s;
+}
+
+
+
+
+
+.menu-bar a:nth-child(3){
+    display: flex;
+    justify-content: center;
+    width: 170px;
+
+}
+
+.menu-bar a:nth-child(3):hover{
+    color: #CD0000;
+    border-bottom: 3px solid #CD0000;
+    transition-duration: 0.2s;
+}
+
