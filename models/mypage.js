@@ -3,11 +3,14 @@ const Schema = mongoose.Schema;
 
 const mypageSchema = new Schema({
     userid: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
+        type : String,
         required: true
     },
-    foods:[String]
+    foods:[{
+        type : Schema.Types.ObjectId, 
+        ref: 'foods',
+        unique : true
+    }]
 });
 
 const mypage = mongoose.model('mypage',mypageSchema);

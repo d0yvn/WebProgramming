@@ -13,10 +13,9 @@
 }
 
 body{
-    overflow:hidden;
+
     display: flex;
     flex-direction: column;
-    background-color: #FFCD1D;
 }
 
 .title-container{
