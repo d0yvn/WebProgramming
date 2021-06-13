@@ -1,4 +1,3 @@
-# MEN 게시판
-이 저장소의 코드는
-[http://a-mean-blog.com/ko/blog/Node-JS-첫걸음/게시판-만들기](http://a-mean-blog.com/ko/blog/Node-JS-첫걸음/게시판-만들기)에서 작성되었습니다.
-<br>
+# What's in my Fridge
+사용자가 자신이 가지고 있는 재료를 입력하면 재료로 만들 수 있는 음식을 추천해준다.
+![냉장고에 뭐있어 메인 페ㅣ지](https://user-images.githubusercontent.com/47681139/121804328-c7820800-cc80-11eb-9309-abe5fc110afb.png)
