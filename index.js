@@ -54,7 +54,7 @@ app.use('/files', require('./routes/files')); // 1
 
 
 let port = process.env.PORT;
-if(post == null || port ==""){
+if(port == null || port ==""){
   port = 4000;
 }
 
