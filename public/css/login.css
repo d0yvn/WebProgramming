@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@font-face {
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-family: UhBeeSeulvely;
+}
+
+* {
+    box-sizing: border-box;
+    background: #FFCD1D;
+}
+
+body {
+    text-align: center;
+}
+
+#font-ko-ubs {
+    /* pre font 'Gamja Flower'*/
+    font-family: UhBeeSeulvely, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 29px;
+}
+
+#font-en {
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 44px;
+    /* identical to box height */
+    text-align: center;
+    color: #CD0000;
+}
+
+form {
+    width: 500px;
+    display: inline-block;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid black;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+button {
+    background-color: #CD0000;
+    color: white;
+    padding: 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family: Caveat Brush;
+    font-size: 35px;
+}
+
+button[type=submit] {
+    margin-top: 30px
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img {
+    width: 120px;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
