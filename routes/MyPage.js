@@ -21,7 +21,7 @@ router.get('/show',function(req,res){ //마이페이지에 저장된 나의 레�
           food.push(data.foods[i])
       }
       console.log(food);
-      res.render('/mypage/myPage',{food});
+      res.render('/mypage/mypage',{food});
   })
 })
 

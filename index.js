@@ -50,7 +50,7 @@ app.use('/recommend', require('./routes/recommend'));
 app.use('/posts', util.getPostQueryString, require('./routes/posts'));
 app.use('/users', require('./routes/users'));
 app.use('/comments', util.getPostQueryString, require('./routes/comments'));
-app.use('/mypage',require('./routes/myPage'));
+app.use('/mypage',require('./routes/mypage'));
 app.use('/files', require('./routes/files')); // 1
 
 
