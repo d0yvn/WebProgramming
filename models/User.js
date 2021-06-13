@@ -5,20 +5,20 @@ var bcrypt = require('bcryptjs');
 var userSchema = mongoose.Schema({
   username:{
     type:String,
-    required:[true,'Username is required!'],
-    match:[/^.{4,12}$/,'Should be 4-12 characters!'],
+    required:[true,'아이디를 입력하세요!'],
+    match:[/^.{4,12}$/,'4-12 글자로 입력해주세요!'],
     trim:true,
     unique:true
   },
   password:{
     type:String,
-    required:[true,'Password is required!'],
+    required:[true,'비밀번호를 입력하세요!'],
     select:false
   },
   name:{
     type:String,
-    required:[true,'Name is required!'],
-    match:[/^.{4,12}$/,'Should be 4-12 characters!'],
+    required:[true,'이름을 입력하세요!'],
+    match:[/^.{2,12}$/,'2-12 글자로 입력해주세요!'],
     trim:true
   },
   email:{

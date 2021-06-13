@@ -14,7 +14,7 @@
       <form action="/users" method="post">
 
         <div class="form-group row" style="display: flex; flex-direction: column;">
-          <label for="username" class="col-sm-3 col-form-label" style=" font-weight: 900;">아이디</label>
+          <label for="username" class="col-sm-3 col-form-label" style=" font-weight: 900;">아이디*</label>
           <div class="col-sm-9">
             <input style= "width: 400px; border-radius: 0; background-color: #FFCD1D; border-top: none; border-left: none; border-right: none; border-bottom:2px solid black;"  type="text" id="username" name="username" value="<%= user.username %>" class="form-control <%= (errors.username)?'is-invalid':'' %>">
             <% if(errors.username){ %>
