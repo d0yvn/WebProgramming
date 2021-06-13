@@ -27,30 +27,26 @@
 
     <!-- jquert -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="/css/nav.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+        @font-face {
+        font-family: 'UhBeeSeulvely';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+    </style>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand">
-        <div class="container-fluid">
-            <a href = "/" class="navbar-brand" id="font-en">WHAT'S IN YOUR FRIDGE</a>
-
-            <ul class="nav justify-content-start">
-                <li class="nav-item">
-                    <a class="nav-link active" id="font-ko1-ubs" aria-current="page" href="#">메뉴 추천받기</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="font-ko1-ubs" href="#">요리 게시판</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    <%- include('../partials/nav') %>
 
     <div class="container-fluid mt-5">
         <div class="info">
-            <h2 id="font-ko-ubs">요리 메뉴 추천받기</h2>
-            <p id="font-ko2">지금 가지고 있는 재료를 입력하면 원하는 요리 스타일에 따라 할 수 있는 요리를 추천합니다</p>
+            <h2 id="font-ko-ubs" >요리 메뉴 추천받기</h2>
+            <p id="font-ko2" style="font-family: Roboto;  ">지금 가지고 있는 재료를 입력하면 원하는 요리 스타일에 따라 할 수 있는 요리를 추천합니다</p>
         </div>
         <div class="img-box">
             <img src="/img/1.png" alt="">
@@ -73,7 +69,7 @@
     <form action="/recommend/process" method="post">
         <div class="container-fluid mt-5 step-1" id="font-ko1">
             <div class="info">
-                <h2><span id="font-en">STEP 1. </span>가진 재료 고르기</h2>
+                <h2 class="info-h2"><span id="font-en">STEP 1.</span> 가진 재료 고르기</h2>
                 <p>현재 가지고 있는 재료를 고르세요!<br>선택하신 요리 재료가 포함된 레시피들이 검색 됩니다.
                 </p>
             </div>
@@ -82,7 +78,7 @@
             <div class="btn-ingredient">
                 <p>육류</p>
                 <select class="selectpicker" name="main_ingredients" multiple="multiple">
-                    <option value = "beef">소고기</option>
+                    <option value = "소고기">소고기</option>
                     <option value = "닭고기">닭고기</option>
                     <option value = "돼지고기">돼지고기</option>
                     <option value = "스팸">스팸</option>
@@ -94,6 +90,7 @@
                 <select class="selectpicker" name="sub_ingredients" multiple="multiple">
                     <option>감자</option>
                     <option>당근</option>
+                    <option>양파</option>
                     <option>양배추</option>
                     <option>파</option>
                     <option>시금치</option>
@@ -124,6 +121,12 @@
             <div class="btn-ingredient">
                 <p>소스/시즈닝류</p>
                 <select class="selectpicker" name="sub_ingredients" multiple="multiple">
+                    <option>소금</option>
+                    <option>설탕</option>
+                    <option>된장</option>
+                    <option>후추</option>
+                    <option>간장</option>
+                    <option>맛술</option>
                     <option>소주</option>
                     <option>청주</option>
                     <option>와이트와인</option>
@@ -133,7 +136,7 @@
             <div class="btn-ingredient">
                 <p>가공식품류</p>
                 <select class="selectpicker" name="sub_ingredients" multiple="multiple">
-                    <option>일반라면</option>
+                    <option>라면</option>
                     <option>짜파게티</option>
                     <option>만두</option>
                 </select>
@@ -149,7 +152,7 @@
 
         <div class="container-fluid mt-5 step-2" id="font-ko1">
             <div class="info">
-                <h2><span id="font-en">STEP 2. </span>요리 테마 선택하기</h2>
+                <h2 class="info-h2"><span id="font-en">STEP 2. </span>요리 테마 선택하기</h2>
                 <p>현재 가지고 있는 재료를 고르세요!<br>테마는 최대 3가지까지 선택 가능합니다.
                 </p>
             </div>
@@ -182,7 +185,7 @@
         </div>
         <div class="container-fluid mt-5 step-3">
             <div class="info">
-                <h2><span id="font-en">STEP 3. </span>요리 방식 선택하기</h2>
+                <h2 class="info-h2"><span id="font-en">STEP 3. </span>요리 방식 선택하기</h2>
                 <p>선택에 따라 조리 시간등이 달라집니다<br>
                 </p>
             </div>

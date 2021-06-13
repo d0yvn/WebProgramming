@@ -43,6 +43,7 @@ router.get('/', async function(req, res){
       } },
       { $project: {
           title: 1,
+          uploadedFiles: 1,
           author: {
             username: 1,
           },
@@ -75,6 +76,7 @@ router.get('/new', util.isLoggedin, function(req, res){
 router.post('/', util.isLoggedin, upload.single('attachment'), async function(req, res){
   var attachment = req.file?await File.createNewInstance(req.file, req.user._id):undefined;
   req.body.attachment = attachment;
+  console.log(req.body.attachment);
   req.body.author = req.user._id;
   Post.create(req.body, function(err, post){
     if(err){
@@ -88,6 +90,8 @@ router.post('/', util.isLoggedin, upload.single('attachment'), async function(re
     }
     res.redirect('/posts'+res.locals.getPostQueryString(false, { page:1, searchText:'' }));
   });
+
+
 });
 
 // show

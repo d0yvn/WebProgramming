@@ -1,4 +1,8 @@
+// models/File.js
+
 var mongoose = require('mongoose');
+var fs = require('fs'); // 1
+var path = require('path'); // 2
 
 // schema
 var fileSchema = mongoose.Schema({
@@ -9,6 +13,24 @@ var fileSchema = mongoose.Schema({
   postId:{type:mongoose.Schema.Types.ObjectId, ref:'post'},
   isDeleted:{type:Boolean, default:false},
 });
+
+// instance methods // 3
+fileSchema.methods.processDelete = function(){ // 4
+  this.isDeleted = true;
+  this.save();
+};
+fileSchema.methods.getFileStream = function(){
+  var stream;
+  var filePath = path.join(__dirname,'..','uploadedFiles',this.serverFileName); // 5-1
+  var fileExists = fs.existsSync(filePath); // 5-2
+  if(fileExists){ // 5-3
+    stream = fs.createReadStream(filePath);
+  }
+  else { // 5-4
+    this.processDelete();
+  }
+  return stream; // 5-5
+};
 
 // model & export
 var File = mongoose.model('file', fileSchema);

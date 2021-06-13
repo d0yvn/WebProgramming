@@ -41,7 +41,7 @@ img {
 /* font 관련 css font-[ko/en][fontSize]-[fontFamily] */
 
 #font-en {
-    font-family: Roboto;
+    font-family: Caveat Brush;
     font-style: normal;
     font-weight: normal;
     font-size: 35px;
@@ -78,16 +78,8 @@ h2 {
     line-height: 29px;
 }
 
-.info-h2{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 29px;
-}
-
 #font-ko1 {
-    font-family: Roboto;
+    font-family: Roboto, cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -105,104 +97,40 @@ h2 {
 
 #font-ko2,
 p {
-    font-family: "Roboto";
+    font-family: Roboto, cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 19px;
     line-height: 29px;
 }
 
-.img-box {
-    display: inline-block;
-}
-
-.btn-group {
-    margin: 7px;
-}
-
-.btn-ingredient {
-    display: inline-block;
-}
-
-.btn-ingredient .btn {
-    width: 175px;
-    height: 62px;
-    border: 4px solid rgba(0, 0, 0, 0.164);
-    background-color: #FFCD1D;
-    border-radius: 40px;
-    font-size: 23px;
-}
-
-.btn-ingredient p {
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.selectpicker {
-    background: red;
-}
-
-.filter-option {
-    /* step1 dropdown btn 글자크기 조절 */
-    line-height: 40px;
-    font-size: 15px;
-    color: black;
-}
-
-
-/*.filter-option기존내장효과지우기*/
-
-.rcp-thm,
-.rcp-time {
-    background: #FFCD1D;
-    margin: 6px;
-}
-
-.rcp-thm.selected,
-.rcp-time.selected {
-    background-color: #DAA520;
-}
-
-.submit {
-    background: #FFCD1D;
-    border: 5x solid #000000;
-    box-sizing: border-box;
+#wrap {
+    /* border: 3px solid rgb(201, 0, 1); */
+    box-shadow: 6px 6px 24px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 6px 6px 24px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 6px 24px 2px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    margin: 30px auto;
+    width: 1100px;
     text-align: center;
-    display: inline-block;
-    line-height: 60px;
-    width: 250px;
-    height: 60px;
-    border-radius: 250px /60px;
-    background-position: center;
-    background-size: auto;
 }
-
-
-/* 초과 클릭시 버튼 비활성화 후 shake animation */
-
-.shake {
-    -webkit-animation: boxmove 0.1s linear 3 alternate;
-    -moz-animation: boxmove 0.1s linear 3 alternate;
-    -ms-animation: boxmove 0.1s linear 3 alternate;
-    -o-animation: boxmove 0.1s linear 3 alternate;
-    animation: boxmove 0.1s linear 3 alternate;
-}
-
-@keyframes boxmove {
-    from {
-        left: 0px;
-    }
-    to {
-        left: 3px;
-    }
-}
-
-
-/* for result2.html */
 
 iframe {
-    display: block;
-    margin: 10px auto;
-    width: 90%;
-    height: 100vw;
+    position: relative;
+    top: 30px;
+    display: inline-block;
+    margin: 0 auto;
+    border: 0px none;
+    margin-left: -40px;
+    height: 1959px;
+    margin-top: -283px;
+    width: 1100px;
+    -ms-zoom: 1.25;
+    -moz-transform: scale(1.25);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1.25);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1.25);
+    -webkit-transform-origin: 0 0;
+    overflow-x: hidden;
 }

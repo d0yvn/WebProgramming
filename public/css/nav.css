@@ -10,6 +10,8 @@
 * {
     padding: 0;
     margin: 0;
+    text-decoration:none;
+
 }
 
 a {
@@ -46,7 +48,7 @@ nav li {
     padding: 0 15px;
 }
 
-.nav li a:hover{
+.nav-link:hover{
   color: #CD0000;
   border-bottom: 3px solid #CD0000;
   transition-duration: 0.2s;
@@ -124,7 +126,7 @@ ul {
     margin-left: 800px;
 } */
 
-.menu-bar a:nth-child(2):hover{
+/* .menu-bar a:nth-child(2):hover{
     color: #CD0000;
     border-bottom: 3px solid #CD0000;
     transition-duration: 0.2s;
@@ -146,4 +148,4 @@ ul {
     border-bottom: 3px solid #CD0000;
     transition-duration: 0.2s;
 }
-
+ */

@@ -13,8 +13,9 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect(process.env.MONGO_DB);
+mongoose.connect("mongodb+srv://yellowtoast:z7p396..@cluster0.zeilw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 var db = mongoose.connection;
+
 db.once('open', function(){
   console.log('DB connected');
 });
@@ -50,6 +51,8 @@ app.use('/posts', util.getPostQueryString, require('./routes/posts'));
 app.use('/users', require('./routes/users'));
 app.use('/comments', util.getPostQueryString, require('./routes/comments'));
 app.use('/mypage',require('./routes/myPage'));
+app.use('/files', require('./routes/files')); // 1
+
 
 // Port setting
 var port = 3000;

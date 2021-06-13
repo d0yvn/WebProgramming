@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메뉴 추천 결과</title>
     <link rel="stylesheet" href="/css/result.css">
+    <link rel="stylesheet" href="/css/nav.css">
     <script src="/js/jquery-3.6.0.min.js"></script>
 
     <style>
@@ -14,11 +15,7 @@
 
 </head>
 <body>
-    <div class="menu-bar">
-        <a href="/" class="title">WHAT'S IN YOUR FRIDGE?</a>
-        <a href="/recommend">메뉴 추천받기</a>
-        <a href="index.html">사용자 요리 게시판</a>
-    </div>
+    <%- include('../partials/nav') %>
     <div class="result-content-container">
         <h3>오늘 <span>한끼 때우고 싶은</span><br>당신의 메뉴는?</h3>
 
@@ -35,10 +32,6 @@
 
             <iframe name="hiddenFrame" class="hide"></iframe>
 
-            <form action="/mypage/saveRecipe" method="post" target="hiddenFrame">
-              <input name="recipeInfo" type="hidden" value = "<%= food[i]._id%>">
-              <input value="저장" type="submit">
-            </form>
         <%}%>
 
         <img src="/img/remenubtn-background-img.png" class="remenu-btn">

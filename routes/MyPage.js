@@ -24,3 +24,5 @@ router.get('/show',function(req,res){ //마이페이지에 저장된 나의 레�
       res.render('/mypage/myPage',{food});
   })
 })
+
+module.exports = router;
