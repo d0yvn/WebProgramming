@@ -17,6 +17,13 @@
       justify-content: center;
       ">사용자 요리 게시판</h2>
 
+<div class="col-2">
+  <% if(isAuthenticated){ %>
+    <a style="font-family: Roboto; font-weight: 700; background-color: black; color: white;" class="btn btn-primary" href="/posts/new<%= getPostQueryString() %>">글쓰기</a>
+  <% } %>
+</div>
+
+
       <!-- <table class="board-table table table-sm border-bottom">
 
         <tbody>
@@ -84,12 +91,7 @@
 
       <div class="row mb-3">
 
-        <div class="col-2">
-          <% if(isAuthenticated){ %>
-            <a class="btn btn-primary" href="/posts/new<%= getPostQueryString() %>">New</a>
-          <% } %>
-        </div>
-
+        
         <nav class="col-8">
           <%
             var offset = 2;
@@ -128,17 +130,17 @@
           </div> -->
 
           <div class="form-group col-9">
-            <label>Search</label>
+            <label>검색하기</label>
             <div class="input-group">
               <select name="searchType" class="custom-select">
-                <option value="title,body" <%= searchType=='title,body'?'selected':'' %>>Title, Body</option>
-                <option value="title" <%= searchType=='title'?'selected':'' %>>Title</option>
-                <option value="body" <%= searchType=='body'?'selected':'' %>>Body</option>
-                <option value="author" <%= searchType=='author'?'selected':'' %>>Author</option>
+                <option value="title,body" <%= searchType=='title,body'?'selected':'' %>>제목, 내용</option>
+                <option value="title" <%= searchType=='title'?'selected':'' %>>제목</option>
+                <option value="body" <%= searchType=='body'?'selected':'' %>>내용</option>
+                <option value="author" <%= searchType=='author'?'selected':'' %>>글쓴이</option>
               </select>
               <input minLength="3" type="text" name="searchText" value="<%= searchText %>">
               <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="submit">Search</button>
+                <button class="btn btn-outline-primary" type="submit" >검색</button>
               </div>
             </div>
           </div>
