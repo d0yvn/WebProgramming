@@ -19,7 +19,11 @@ a {
     font-family: 'UhBeeSeulvely';
     font-size: 18px;
     color: black;
+    
 }
+
+a:visited { color: black; text-decoration: none;}
+
 
 .title {
 

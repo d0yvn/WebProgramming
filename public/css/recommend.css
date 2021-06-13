@@ -42,9 +42,9 @@ img {
 
 #font-en {
     font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
+
+    font-weight: 700;
+    font-size: 25px;
     line-height: 44px;
     /* identical to box height */
     text-align: center;
@@ -53,9 +53,9 @@ img {
 }
 
 #font-en1 {
-    font-family: Caveat Brush;
+    font-family: UhBeeSeulvely;
     font-style: normal;
-    font-size: 21px;
+    font-size: 19px;
     color: #DAA520;
 }
 
@@ -74,15 +74,15 @@ h2 {
     font-family: UhBeeSeulvely, cursive;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 32px;
     line-height: 29px;
 }
 
 .info-h2{
     font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
+
+    font-weight: 700;
+    font-size: 25px;
     line-height: 29px;
 }
 
@@ -98,18 +98,31 @@ h2 {
     font-family: UhBeeSeulvely, cursive;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     color: black;
 }
 
 #font-ko2,
 p {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 19px;
-    line-height: 29px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+
+p{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 15px;
+
+    margin-top: 16px;
+}
+
+.info > p {
+    margin-top: 3px;
 }
 
 .img-box {
@@ -149,6 +162,13 @@ p {
     color: black;
 }
 
+.btn-ingredient > p {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 23px;
+    margin-top: 16px;
+}
 
 /*.filter-option기존내장효과지우기*/
 
@@ -156,16 +176,25 @@ p {
 .rcp-time {
     background: #FFCD1D;
     margin: 6px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 23px;
+    margin-top: 16px;
+    border-radius: 40px;
+
 }
 
 .rcp-thm.selected,
 .rcp-time.selected {
-    background-color: #DAA520;
+    background-color: #000000;
+    color:white;
 }
 
 .submit {
     background: #FFCD1D;
-    border: 5x solid #000000;
+    font-size:22px;
+    border: 5px solid #000000;
     box-sizing: border-box;
     text-align: center;
     display: inline-block;
@@ -175,6 +204,7 @@ p {
     border-radius: 250px /60px;
     background-position: center;
     background-size: auto;
+    margin-bottom: 30px;
 }
 
 
