@@ -8,6 +8,10 @@ router.get('/',function(req,res){
 router.post('/process',function(req,res){
   const time = req.body.time;
 
+  if(typeof req.body.sub_ingredients == "undefined"){
+    res.redirect('recommend/index')
+}
+
     if(time == 1){
         foods.find({"time":{$lte:30}},(error,food) => {
             console.log("short");
@@ -135,11 +139,16 @@ function ingredientCount(sub_ingredients,food){ // 중첩된 sub_ingredients의 
     for(var j = 0;j<food.length;j++){
         var sum = sub_ingredients.concat(food[j].ingredients);
         result = sum.filter((item, index) => sum.indexOf(item) !== index)
-        if(result.length != 0){ // 중복된게 없으면 포함 X
-            food[j].count = result.length;
+
+        food[j].count = sub_ingredients.length - result.length;
+        if(food[j].count >= 0){
             aJsonArray.push(food[j]);
+            // console.log(food[j].count + " result :  " + result.length + " sub_ingredients: " + sub_ingredients.length);
         }
+
+        // aJsonArray.push(food[j]);
     }
+    console.log(aJsonArray);
     return aJsonArray.sort(desSort);
 }
 
