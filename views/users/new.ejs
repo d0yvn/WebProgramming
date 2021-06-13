@@ -9,8 +9,8 @@
 
     <div class="container mb-3">
 
-      <h3 class="contentBoxTop mb-3">회원가입</h3>
-      <div>아래의 정보를 입력하여 회원가입하시고<br>저희 서비스를 편하게 이용하세요.</div>
+      <h3 class="contentBoxTop mb-3" style="margin-top: 20px; font-family: Roboto; font-size: 30px; font-weight: 700;">회원가입</h3>
+      <div style="font-family: Roboto; font-size: 15px;">아래의 정보를 입력하여 회원가입하시고<br>저희 서비스를 편하게 이용하세요.</div>
       <form action="/users" method="post">
 
         <div class="form-group row" style="display: flex; flex-direction: column;">
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="form-group row" style="display: flex; flex-direction: column;">
-          <label for="email" class="col-sm-3 col-form-label">이메일</label>
+          <label for="email" class="col-sm-3 col-form-label" style="font-weight: 700;">이메일</label>
           <div class="col-sm-9">
             <input style= "width: 400px; border-radius: 0; background-color: #FFCD1D; border-top: none; border-left: none; border-right: none; border-bottom:2px solid black;" type="text" id="email" name="email" value="<%= user.email %>" class="form-control <%= (errors.email)?'is-invalid':'' %>">
             <% if(errors.email){ %>
@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="form-group row" style="display: flex; flex-direction: column;">
-          <label for="password" class="col-sm-3 col-form-label">비밀번호*</label>
+          <label for="password" class="col-sm-3 col-form-label" style="font-weight: 700;">비밀번호*</label>
           <div class="col-sm-9">
             <input style= "width: 400px; border-radius: 0; background-color: #FFCD1D; border-top: none; border-left: none; border-right: none; border-bottom:2px solid black;" type="password" id="password" name="password" value="" class="form-control <%= (errors.password)?'is-invalid':'' %>">
             <% if(errors.password){ %>
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="form-group row" style="display: flex; flex-direction: column;">
-          <label for="passwordConfirmation" class="col-sm-3 col-form-label">비밀번호 확인*</label>
+          <label for="passwordConfirmation" class="col-sm-3 col-form-label" style="font-weight: 700;">비밀번호 확인*</label>
           <div class="col-sm-9 col-sm-offset-3">
             <input style= "width: 400px; border-radius: 0; background-color: #FFCD1D; border-top: none; border-left: none; border-right: none; border-bottom:2px solid black;" type="password" id="passwordConfirmation" name="passwordConfirmation" value="" class="form-control <%= (errors.passwordConfirmation)?'is-invalid':'' %>">
             <% if(errors.passwordConfirmation){ %>
@@ -59,7 +59,7 @@
           </div>
         </div>
         <p>
-          <small>*필수</small>
+          <small style="font-weight: 700;">*필수</small>
         </p>
 
         <% if(errors.unhandled){ %>
